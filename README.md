@@ -5,6 +5,7 @@
 1. Instalación de las herramientas básicas para el curso
 2. Repositorio y estructura de los talleres
 3. El mundo según C, C++ y otros
+4. Interprete de comandos (`bash`)
 
 ## Instalación de las herramientas básicas para el curso
 
@@ -47,6 +48,8 @@ sudo apt install git golang meld tree ssh tmux wget curl cmake zip unzip
 ```
 
 * Para instalar [Rush](https://www.digitalocean.com/community/tutorials/install-rust-on-ubuntu-linux).
+
+Instalar la terminal de [Windows](https://learn.microsoft.com/en-us/windows/terminal/install).
 
 #### MSYS2
 
@@ -226,12 +229,41 @@ Normalmente, esto lo observamos la declaración de funciones, que reciben parám
 
 En la programación actual, se requiere construir programas que implementen la solución más general y que a través de los parámetros se pueda cambiar su comportamiento. En el caso de los programas y los guiones, esto se puede lograr a través de los argumentos de la línea de comandos o las variables de ambiente.
 
-Vamos a ver como hacerlo a través de Linux y Windows.
+Vamos a ver como hacerlo a través de Linux y Windows y en el camino como aprenderlo hacerlo utilizando el lenguaje de programación C.
 
-### Línea de Argumentos. En los programas de terminal más común de cambiar
-el comportamiento de un programa es a través de la línea de comandos.
+### Línea de argumentos
+
+#### Linux
+
+El comportamiento de un programa es a través de la línea de comandos.
 
 
-* [Linea de Argumentos](./src/LineaDeArgumentos.c): Se encarga de
-  mostrar como un programa recibe argumentos del mundo exterior, a
-  través del Shell y de la línea de comandos.
+* [Linea de Argumentos](./argumentos/linux/argumentos.c): Se encarga de mostrar como un programa recibe argumentos del mundo exterior, a través del Shell y de la línea de comandos.
+* [Manejo de argumentos](./argumentos/linux/manejo_argumentos.c): Los argumentos puede ser opcionales o tener variables, hacerlo de manera manual es un poco complicado, vamos a utilizar una biblioteca `getpopt`.
+
+#### Windows
+
+El comportamiento de un programa es a través de la línea de comandos.
+
+
+* [Linea de Argumentos](./argumentos/windows/argumentos.c): Se encarga de mostrar como un programa recibe argumentos del mundo exterior, a través del Shell y de la línea de comandos.
+* [Manejo de argumentos](./argumentos/windows/manejo_argumentos.c): Los argumentos puede ser opcionales o tener variables, hacerlo de manera manual es un poco complicado, vamos a utilizar una biblioteca `getpopt`.
+
+### Variables de ambiente
+
+El comportamiento de un programa puede alterarse a través de las variables de ambiente.
+
+#### Linux
+
+* [Mostrar las variables de ambiente](./ambiente/linux/ambiente.c): Listar todas las variables de ambiente.
+* [Mostrar una variable de ambiente en particular](./ambiente/linux/variable.c): Mostrar una variable particular.
+
+#### Windows
+
+* [Mostrar las variables de ambiente](./ambiente/windows/ambiente.c): Listar todas las variables de ambiente.
+* [Mostrar una variable de ambiente en particular](./ambiente/windows/variable.c): Mostrar una variable particular.
+
+## Interprete de comandos (`bash`)
+
+* Scripts
+* Proyecto: `downproglab.sh`

@@ -4,6 +4,7 @@
  * pasados al programa.
  */
 #include <stdio.h>
+#include <Windows.h>
 
 int
 main(int argc, char *argv[]) {
@@ -17,7 +18,6 @@ main(int argc, char *argv[]) {
    * muestra en la salida estandar */
   for (i = 0; i < argc; i++) {
     fprintf(stdout, "Argumento[%d]=%s\n", i, argv[i]);
-    
   }
 
   return 0;
